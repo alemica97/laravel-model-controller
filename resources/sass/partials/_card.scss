@@ -1,8 +1,12 @@
 .cards-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+
+    .card.best-card{
+        width: calc((100% / 4) - 20px);
+    }
 
     .card{
         width: calc((100% / 5) - 20px);
@@ -13,6 +17,12 @@
         color: white;
         background-color: rgba(8, 5, 53, 0.438);
         position: relative;
+
+        &:hover{
+            background-color: rgba(35, 30, 105, 0.541);;
+            transform: translateY(-5px);
+            transition: all 500ms;
+        }
 
         h1{
             font-size: 30px;

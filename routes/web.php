@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','MovieController@index')->name('home');
+Route::get('/','MovieController@index')->name('home.index');
+
+Route::get('best_films/','MovieController@show')->name('films.show');
+
+// Route::get('vote_desc/','MovieController@showVote')->name('vote.show');

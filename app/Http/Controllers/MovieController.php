@@ -16,4 +16,14 @@ class MovieController extends Controller
         // nella pagina (home.blade.php)
         return view('home', compact('movies'));
     }
+
+    public function show(){
+        $movies = Movie::where('vote','>=',9.0)->get();
+        return view('partials.bestFilms', compact('movies'));
+    }
+
+//     public function showVote(){
+//         $movies = Movie::orderBy('vote','desc')->get();
+//         return view('partials.voteDesc', compact('movies'));
+//     }
 }

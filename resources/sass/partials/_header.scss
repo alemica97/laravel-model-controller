@@ -2,9 +2,45 @@ header{
     height: 80px;
     background-color: rgba(8, 5, 53, 0.438);
     color: white;
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+
+    .header-info{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{
+            font-size: 35px;
+            text-transform: uppercase;
+            opacity: 0.8;
+
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+                transition: all 500ms;
+            }
+        }
+        
+        .vote-btn{
+            padding: 10px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 15px;
+
+            &:hover{
+                background-color: rgb(74, 124, 218);
+                transition: all 500ms;
+                cursor: pointer;
+            }
+        }
+    }
+
 }
