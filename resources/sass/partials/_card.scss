@@ -1,0 +1,41 @@
+.cards-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card{
+        width: calc((100% / 5) - 20px);
+        aspect-ratio: 9/16;
+        border-radius: 15px;
+        text-align: center;
+        padding: 25px 15px;
+        color: white;
+        background-color: rgba(8, 5, 53, 0.438);
+        position: relative;
+
+        h1{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        
+        h4{
+            font-size: 20px;
+            color: cornflowerblue;
+            margin-bottom: 30px;
+        }
+
+        .info{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            span{
+                display: block;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+

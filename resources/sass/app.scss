@@ -1,8 +1,22 @@
 //
 @import 'partials/header';
+@import 'partials/card';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
 }
