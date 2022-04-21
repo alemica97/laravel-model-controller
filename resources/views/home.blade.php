@@ -1,3 +1,9 @@
+@php
+    function roundVote($vote){
+        return (ceil($vote) * 0.5);
+    }
+@endphp
+
 @extends('layouts.app')
 
 @section('pageTitle','Movies')
@@ -15,7 +21,12 @@
                     <div class="info">
                         <span class="nationality">{{ $movie->nationality }}</span>
                         <span class="date">{{ $movie->date }}</span>
-                        <span class="vote">{{ $movie->vote }}</span>
+                        <span class="vote">voto: {{ $movie->vote }}</span>
+                        <span>
+                        @for ($i = 0; $i < 5; $i++)
+                        <i class="{{ roundVote($movie->vote) > $i ? 'fa-solid fa-star' : 'fa-regular fa-star'}}"></i>
+                        @endfor
+                        </span>
                     </div>
                 </div>
                 @endforeach
